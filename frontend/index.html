@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nome+da+Fonte1|Nome+da+Fonte2&display=swap">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Perfil Profissional</title>
+</head>
+<body>
+    <header>
+        <h1>Victor Gabriel Cunha Rodrigues</h1>
+        <h2>Desenvolvedor Back-End <i class="fab fa-python"></i> <i class="fab fa-js"></i> <i class="fab fa-cuttlefish"></i> <i class="fab fa-react"></i></h2>
+    </header>
+    <main class="container py-4">
+        <section>
+            <h3>Sobre Mim</h3>
+            <p>Me chamo Victor, tenho 19 anos, sou programador/desenvoldor backend desde 2022,
+                cursei Análise e Desenvolvimento de Sistemas pelo Instituto Federal do Piaui(IFPI)
+                ,e atualmente, estou cursando Gestão de Dados na UFPI.</p>
+        </section>
+        <section>
+            <h3>Habilidades/Conhecimentos</h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <p>Conhecimentos em Metodologias Ágeis.</p>
+                    <p>Habilidades em Arquitetura de Software.</p>
+                    <p>Conhecimentos em Python, Javascript, HTML, CSS e Typescript.</p>
+                    <p>Habilidades com Banco de dados Relacionais(EX: postgress) e não relacionais(EX: MongoDb).</p>
+                    <p>Frameworks Utilizados: Express, FastAPI, Django, React, Bootstrap, entre outros.</p>
+                    <p>Excel Intermediário.</p>
+                </li>
+                
+            </ul>
+        </section>
+        <section>
+            <h3>Experiência Profissional</h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h4>Empresa: Industrias Dureino</h4>
+                    <p>Minhas tarefas diárias são em sua maioria, desenvolver meio de 
+                        automatizar processos por meios de sistemas/scripts utilizando diversos meios para tal.</p>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h3>Educação</h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h4>Análise e Desenvolvimentos de Sistemas(IFPI)</h4>
+                    <p>Finalizado em Julho de 2023</p>
+                </li>
+                <li class="list-group-item">
+                    <h4>Gestão de Dados(UFPI)</h4>
+                    <p>Cursando...</p>
+                </li>
+            </ul>
+        </section>
+        <div class="spacer"></div>
+    </main>
+    <footer class=" text-white text-center p-2 fixed-bottom" id="footer">
+        <div>
+            <a href="https://github.com/seuusuario" target="_blank" class="text-white me-2"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/seuperfil" target="_blank" class="text-white me-2"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://www.instagram.com/seuusuario" target="_blank" class="text-white me-2"><i class="fab fa-instagram"></i> Instagram</a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            let footer = document.getElementById("footer");
+
+            function fadeIn(element) {
+                element.style.opacity = 1;
+                element.style.transition = "opacity 1s ease";
+            }
+
+            function fadeOut(element) {
+                element.style.opacity = 0;
+                element.style.transition = "opacity 1s ease";
+            }
+
+            window.addEventListener("scroll", function () {
+                let scrollPosition = window.scrollY;
+                let windowHeight = window.innerHeight;
+                let documentHeight = document.documentElement.scrollHeight;
+
+                if (scrollPosition >= documentHeight - windowHeight) {
+                    fadeIn(footer);
+                } else {
+                    fadeOut(footer);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
